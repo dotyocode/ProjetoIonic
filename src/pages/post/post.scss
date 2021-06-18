@@ -1,0 +1,33 @@
+page-post {
+
+  .imgTopo {
+    width: 100%;
+
+  }
+
+  .post-title{
+    display: block;
+    text-align: center;
+    font-size: 1.2em;
+    line-height: 1.2;
+    color: rgb(255, 255, 255);
+    margin: 2px 0;
+    padding: 7px 0;
+    background-color: rgb(0, 132, 255);
+  }
+
+  .post-conteudo{
+    margin: 0 0 2px;
+    font-size: 1.4rem;
+    color: #666;
+    line-height: 1.4;
+  }
+    .bold-title{
+      font-size: inherit;
+      font-weight: bold;
+      color: #000
+    }
+
+
+
+}

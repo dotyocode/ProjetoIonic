@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title *ngIf="post">Postagem</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="grande">
+<ion-grid>
+  <ion-row>
+  <div *ngIf="post">
+    <div class="grande">
+      <img [src]="post.better_featured_image.source_url" class="imgTopo"/>
+    </div>
+
+    <div class="post-title" [innerHTML]="post.title.rendered" padding></div>
+    <hr>
+    <p class="post-conteudo" [innerHTML]="post.content.rendered" padding></p>
+    <hr>
+
+      <ion-col size="6">
+        <ion-icon ios="ios-calendar" md="md-calendar"></ion-icon>
+        {{post.date.split('T')[0] | date: 'd MM, y'}}
+      </ion-col>
+
+      <ion-col text-right   size="6">
+        <ion-icon ios="ios-person" md="md-person"></ion-icon>
+        {{user}}
+      </ion-col>
+    </div>
+  </ion-row>
+ </ion-grid>
+
+  <hr>
+
+  <p class="bold-title">Categoria:</p>
+  <ion-grid>
+  <ion-row>
+    <ion-col *ngFor="let category of categories" size="2">
+      <ion-badge>{{category.name}}</ion-badge>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+</ion-content>

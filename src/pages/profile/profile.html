@@ -1,0 +1,38 @@
+
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title start>Meu Perfil</ion-title>
+    <ion-buttons start>
+
+      <button ion-button icon-only (click)="voltar()"><ion-icon ios="ios-arrow-back" md="md-arrow-back"></ion-icon></button>
+
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-item *ngIf="fotoPerfil">
+    <ion-thumbnail radius slot="start">
+      <img src="{{facebook.fotoUrl}}">
+    </ion-thumbnail>
+    <hr>
+    <p>Seu nome: </p>
+    <h2 class="nomes">{{facebook.nome}}</h2>
+    <hr>
+    <p>Seu Email:</p>
+    <h2>{{email}}</h2>
+  </ion-item>
+
+  <ion-item *ngIf="!fotoPerfil">
+    <ion-thumbnail slot="start">
+      <img src="../../assets/imgs/fotoPerfil.png">
+    </ion-thumbnail>
+    <hr>
+    <h2>Nutri Brasil</h2>
+    <p>Você precisa se <a class="primary">registrar</a></p>
+    <p>{{email}}</p>
+  </ion-item>
+
+
+</ion-content>
